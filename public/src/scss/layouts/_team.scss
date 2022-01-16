@@ -1,0 +1,659 @@
+.team {
+    display: grid;
+    grid-template-columns: repeat(3, 19rem);
+    grid-template-rows: auto;
+    padding: 6.25em 0;
+    gap: 1em;
+
+    &__card {
+        width: 19rem;
+        text-align: center;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+
+        figure {
+            cursor: pointer;
+            img {
+                border-radius: 8px 8px 0 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1.813em;
+            padding-top: 8px;
+        }
+
+        p {
+            font-weight: 300;
+            line-height: 1.75em;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+// light-box styles
+
+.lightbox__style--1 {
+    background: rgba(17, 17, 17, 0.83);
+    z-index: 1;
+    display: none;
+
+    .row {
+        display: flex;
+        max-height: 100vh;
+        padding: 1rem 0;
+
+        .col--1 {
+            position: relative;
+            figure {
+                height: 25rem;
+                width: 25rem;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .team__info {
+                text-align: center;
+                background-color: $dark_pink;
+                color: $white;
+                padding-top: 1.8rem;
+            }
+
+            .team__icon {
+                display: flex;
+                gap: 1em;
+                padding-top: 0.625em;
+                padding-bottom: 1.9rem;
+                justify-content: center;
+            }
+
+            &::after {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 800;
+                content: "\f0da";
+                font-size: 5rem;
+                color: $dark_pink;
+                position: absolute;
+                right: -1.8rem;
+                z-index: 100;
+                top: 4rem;
+            }
+        }
+
+        .col--2 {
+            height: 33rem;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                width: 0.625em;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $dark_pink;
+            }
+
+            position: relative;
+            padding: 4.375em 2.563em 3.188em 4em;
+            background-color: $white;
+
+            .lightbox__close {
+                position: absolute;
+                top: 0.813em;
+                right: 0.438em;
+                background-color: $dark_pink;
+                border-radius: 50%;
+                padding: 0.125em 0.375em;
+                color: $white;
+                font-weight: 800;
+                font-size: 0.75em;
+            }
+
+            h2 {
+                color: $dark_pink;
+                font-weight: 800;
+                font-size: 1.875em;
+            }
+
+            h3 {
+                color: $dark_pink;
+                font-weight: 600;
+                font-size: 1.25em;
+                opacity: 0.58;
+                margin-bottom: 1.313em;
+            }
+        }
+    }
+
+    .lightbox__close {
+        cursor: pointer;
+    }
+}
+.pop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media all and (min-width: 1440px) {
+    .team {
+        display: grid;
+        grid-template-columns: repeat(3, 22rem);
+        grid-template-rows: auto;
+        padding: 6.25em 0;
+        gap: 1em;
+
+        &__card {
+            width: 100%;
+            text-align: center;
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+
+            figure {
+                cursor: pointer;
+                img {
+                    border-radius: 8px 8px 0 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            h4 {
+                font-size: 1.2rem;
+                font-weight: 700;
+                line-height: 1.813em;
+                padding-top: 8px;
+            }
+
+            p {
+                font-weight: 300;
+                line-height: 1.75em;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .lightbox__style--1 {
+        .row {
+            display: flex;
+            max-height: 100vh;
+            padding: 2rem 0 5rem 0;
+
+            .col--1 {
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+                figure {
+                    width: 24rem;
+                    height: 22rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .team__info {
+                    width: 24rem;
+                    text-align: center;
+                    background-color: $dark_pink;
+                    color: $white;
+                    padding-top: 2rem;
+                    padding-bottom: 1rem;
+                    font-size: 1rem;
+                }
+
+                .team__icon {
+                    padding-top: 0.6em;
+                    padding-bottom: 1.5em;
+                    justify-content: center;
+                }
+                &::after {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 800;
+                    content: "\f0da";
+                    font-size: 5rem;
+                    color: $dark_pink;
+                    position: absolute;
+                    right: -1.8rem;
+                    z-index: 100;
+                    top: 0.5rem;
+                }
+            }
+
+            .col--2 {
+                overflow-y: scroll;
+                height: 30.8rem;
+
+                &::-webkit-scrollbar {
+                    width: 0.625em;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: $dark_pink;
+                }
+
+                position: relative;
+                padding: 1rem 2.563rem 1rem 4rem;
+                background-color: $white;
+
+                .lightbox__close {
+                    position: absolute;
+                    top: 0.813em;
+                    right: 0.438em;
+                    background-color: $dark_pink;
+                    border-radius: 50%;
+                    padding: 0.125em 0.375em;
+                    color: $white;
+                    font-weight: 800;
+                    font-size: 0.75em;
+                }
+
+                h2 {
+                    color: $dark_pink;
+                    font-weight: 800;
+                    font-size: 1.875em;
+                }
+
+                h3 {
+                    color: $dark_pink;
+                    font-weight: 600;
+                    font-size: 1.25em;
+                    opacity: 0.58;
+                    margin-bottom: 1.313em;
+                }
+            }
+        }
+
+        .lightbox__close {
+            cursor: pointer;
+        }
+    }
+    .pop {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .team {
+        display: flex;
+        padding: 6.25em 0;
+        gap: 1em;
+
+        &__card {
+            text-align: center;
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+
+            figure {
+                cursor: pointer;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            h4 {
+                font-size: 1.25em;
+                font-weight: 700;
+                line-height: 1.813em;
+                padding-top: 8px;
+            }
+
+            p {
+                font-weight: 300;
+                line-height: 1.75em;
+            }
+        }
+    }
+
+    .lightbox__style--1 {
+        .row {
+            display: flex;
+            max-height: 100vh;
+            padding: 2rem 0 5rem 0;
+
+            .col--1 {
+                position: relative;
+                width: 23rem;
+                height: 100%;
+
+                figure {
+                    width: 100%;
+                    height: 22rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .team__info {
+                    max-width: 100%;
+                    text-align: center;
+                    background-color: $dark_pink;
+                    color: $white;
+                    padding-top: 2rem;
+                    padding-bottom: 1rem;
+                    font-size: 1rem;
+                }
+
+                .team__icon {
+                    padding-top: 0.6em;
+                    padding-bottom: 1.5em;
+                    justify-content: center;
+                }
+                &::after {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 800;
+                    content: "\f0da";
+                    font-size: 4.5rem;
+                    color: $dark_pink;
+                    position: absolute;
+                    right: -1.6rem;
+                    z-index: 100;
+                    top: 0.2rem;
+                }
+            }
+
+            .col--2 {
+                overflow-y: scroll;
+                height: 30.8rem;
+
+                &::-webkit-scrollbar {
+                    width: 0.625em;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: $dark_pink;
+                }
+
+                position: relative;
+                padding: 1rem 2.563rem 1rem 4rem;
+                background-color: $white;
+
+                .lightbox__close {
+                    position: absolute;
+                    top: 0.813em;
+                    right: 0.438em;
+                    background-color: $dark_pink;
+                    border-radius: 50%;
+                    padding: 0.25em 0.5em;
+                    color: $white;
+                    font-weight: 800;
+                    font-size: 0.6em;
+                    cursor: pointer;
+                }
+
+                h2 {
+                    color: $dark_pink;
+                    font-weight: 800;
+                    font-size: 1.6rem;
+                }
+
+                h3 {
+                    color: $dark_pink;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    opacity: 0.58;
+                    margin-bottom: 1.313em;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+    .pop {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .team {
+        display: grid;
+        grid-template-columns: repeat(2, 19rem);
+        grid-template-rows: auto;
+        padding: 6.25em 0;
+        gap: 1em;
+
+        &__card {
+            width: 19rem;
+            text-align: center;
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+
+            figure {
+                cursor: pointer;
+                img {
+                    border-radius: 8px 8px 0 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            h4 {
+                font-size: 1.2rem;
+                font-weight: 700;
+                line-height: 1.813em;
+                padding-top: 8px;
+            }
+
+            p {
+                font-weight: 300;
+                line-height: 1.75em;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .lightbox__style--1 {
+        .row {
+            display: flex;
+            max-height: 100vh;
+            padding: 5rem 0 5rem 0;
+
+            .col--1 {
+                position: relative;
+                width: 19rem;
+                height: 100%;
+
+                figure {
+                    width: 100%;
+                    height: 18.5rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .team__info {
+                    max-width: 100%;
+                    text-align: center;
+                    background-color: $dark_pink;
+                    color: $white;
+                    padding-top: 2rem;
+                    padding-bottom: 1rem;
+                    font-size: 0.9rem;
+                }
+
+                .team__icon {
+                    padding-top: 0.6em;
+                    padding-bottom: 1.3em;
+                    justify-content: center;
+                }
+                &::after {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 800;
+                    content: "\f0da";
+                    font-size: 4.5rem;
+                    color: $dark_pink;
+                    position: absolute;
+                    right: -1.6rem;
+                    z-index: 100;
+                    top: 0.2rem;
+                }
+            }
+
+            .col--2 {
+                overflow-y: scroll;
+                height: 26.5rem;
+
+                &::-webkit-scrollbar {
+                    width: 0.625em;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: $dark_pink;
+                }
+
+                position: relative;
+                padding: 1rem 2rem 1rem 2rem;
+                background-color: $white;
+
+                .lightbox__close {
+                    position: absolute;
+                    top: 0.813em;
+                    right: 0.438em;
+                    background-color: $dark_pink;
+                    border-radius: 50%;
+                    padding: 0.25em 0.5em;
+                    color: $white;
+                    font-weight: 800;
+                    font-size: 0.6em;
+                    cursor: pointer;
+                }
+
+                h2 {
+                    color: $dark_pink;
+                    font-weight: 800;
+                    font-size: 1.2rem;
+                }
+
+                h3 {
+                    color: $dark_pink;
+                    font-weight: 600;
+                    font-size: 0.9rem;
+                    opacity: 0.58;
+                    margin-bottom: 1.313em;
+                }
+
+                p {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+    .pop {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .team {
+        display: grid;
+        grid-template-columns: repeat(1, 19rem);
+        grid-template-rows: auto;
+        padding: 6.25em 0 6.25rem 2.5rem;
+        gap: 1em;
+        grid: 2rem;
+
+        &__card {
+            width: 19rem;
+            text-align: center;
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+
+            figure {
+                cursor: pointer;
+                img {
+                    border-radius: 8px 8px 0 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            h4 {
+                font-size: 1.2rem;
+                font-weight: 700;
+                line-height: 1.813em;
+                padding-top: 8px;
+            }
+
+            p {
+                font-weight: 300;
+                line-height: 1.75em;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 320px) {
+    .team {
+        display: grid;
+        grid-template-columns: repeat(1, 15rem);
+        grid-template-rows: auto;
+        padding: 6.25rem 0;
+        gap: 1em;
+        grid: 2rem;
+        justify-content: center;
+
+        &__card {
+            width: 15rem;
+            text-align: center;
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+
+            figure {
+                cursor: pointer;
+                img {
+                    border-radius: 8px 8px 0 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            h4 {
+                font-size: 1.2rem;
+                font-weight: 700;
+                line-height: 1.813em;
+                padding-top: 8px;
+            }
+
+            p {
+                font-weight: 300;
+                line-height: 1.75em;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

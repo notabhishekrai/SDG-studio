@@ -1,0 +1,26 @@
+To copy following file:
+
+1) gulpfile.js
+2) package.json
+3) package-lock.json
+5) .gitignore
+
+
+
+Then, 
+-change necessary file in package.json
+-open terminal
+-install (npm i)
+
+open virtual host in notepad++
+-change virtual host & host.
+
+then include unnecessary file in .gitignore
+the restart xamp apache server 
+
+To make repository and then follow following steps:
+
+after cloning, run npm install to install all the dependencies
+run gulp watch in terminal to open server 
+
+copy scss file from downloaded bootstrap file and paste it to (create vendor/bootstrap folder)
